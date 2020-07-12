@@ -10,9 +10,9 @@
 
     <!-- CARDS -->
     <div class="row mt-5">
-
+        {% set count=0 %}
         {% for key in tours %} {# заполняем карточки c информацией обо всех турах из data.py #}
-
+        {% if loop.index < 7 %}
         <div class="col-4 d-flex">
             <div class="card mb-4">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-
+        {% endif %}
         {% endfor %}
 
     </div>
